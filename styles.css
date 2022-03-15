@@ -1,0 +1,116 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+:root {
+  /* colors */
+  --clr-white: 193 38% 86%;
+  --clr-neon: 150 100% 66%;
+  --clr-dark: 218 23% 16%;
+
+  /* font size */
+  --fs-normal: 24px;
+}
+@media (min-width: 30rem) {
+  :root {
+    --fs-normal: 28px;
+  }
+}
+/* ----------------- */
+/* Reset             */
+/* ----------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p,
+picture {
+  margin: 0;
+}
+/*  */
+/* Set upp for body   */
+
+body {
+  min-height: 100vh;
+  background-color: hsl(var(--clr-dark));
+  font-family: "Manrope";
+  color: hsl(var(--clr-white));
+  text-align: center;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* accessibility for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* Components */
+
+.advice-section {
+  position: relative;
+  margin: 1rem;
+  padding: min(5rem, 4rem) min(2rem, 3rem);
+  font-size: var(--fs-normal);
+  max-width: 30rem;
+  background-color: hsl(var(--clr-white) / 0.1);
+  border-radius: 10px;
+}
+.advice-section > h1 {
+  font-size: 0.5em;
+  letter-spacing: 4px;
+  font-weight: 400;
+  color: hsl(var(--clr-neon));
+  text-transform: uppercase;
+}
+
+/* New advice button */
+.btn-advice {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  width: 5em;
+  aspect-ratio: 1;
+  padding-inline: 1rem;
+  background-color: hsl(var(--clr-neon));
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 600ms ease-out;
+}
+.btn-advice:hover,
+.btn-advice:focus {
+  box-shadow: 0 0 1.5rem 1px hsl(var(--clr-neon));
+}

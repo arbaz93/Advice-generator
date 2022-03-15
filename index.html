@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Advice generator app</title>
+
+    <!-- Font Style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Manrope"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- JS -->
+    <script src="script.js" defer></script>
+  </head>
+  <body class="flex">
+    <main class="advice-section container flex">
+      <h1>Advice #<span class="advice-id">117</span></h1>
+      <p class="advice">
+        "It is easy to sit up and take notice. what's difficult is getting up
+        and taking action."
+      </p>
+
+      <!-- Divider -->
+      <picture>
+        <source
+          media="(min-width:30rem)"
+          srcset="./images/pattern-divider-desktop.svg"
+        />
+        <img src="./images/pattern-divider-mobile.svg" />
+      </picture>
+
+      <!-- new Advice button -->
+      <button class="btn-advice">
+        <span class="sr-only">click for new advice</span>
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+            fill="#202733"
+          />
+        </svg>
+      </button>
+    </main>
+  </body>
+</html>
