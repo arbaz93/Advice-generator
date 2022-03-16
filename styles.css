@@ -114,3 +114,21 @@ picture {
 .btn-advice:focus {
   box-shadow: 0 0 1.5rem 1px hsl(var(--clr-neon));
 }
+
+/* color flicker animation */
+
+.animate {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: hsl(var(--clr-neon));
+  }
+  50% {
+    background-color: hsl(var(--clr-neon) / 0.6);
+  }
+  100% {
+    background-color: hsl(var(--clr-neon) / 1);
+  }
+}
